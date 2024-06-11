@@ -7,10 +7,20 @@ import {
   FaReact,
   FaFigma,
   FaNodeJs,
+  FaPython,
+  FaDocker,
+  FaPhp,
 } from "react-icons/fa";
-
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
-// About
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiMongodb,
+  SiFirebase,
+  SiLaravel,
+  SiPostman,
+  SiMysql,
+  SiC,
+} from "react-icons/si";
 const about = {
   title: "About me",
   description: "Aaa",
@@ -81,11 +91,7 @@ const skills = {
     },
     {
       icon: <FaCss3 />,
-      name: "Css",
-    },
-    {
-      icon: <FaHtml5 />,
-      name: "HTML5",
+      name: "CSS",
     },
     {
       icon: <FaJs />,
@@ -93,23 +99,51 @@ const skills = {
     },
     {
       icon: <FaReact />,
-      name: "react.js",
+      name: "React.js",
     },
     {
       icon: <SiNextdotjs />,
-      name: "next.js",
+      name: "Next.js",
     },
     {
       icon: <SiTailwindcss />,
-      name: "Tailwindcss",
+      name: "Tailwind CSS",
     },
     {
       icon: <FaNodeJs />,
       name: "Node.js",
     },
     {
-      icon: <FaFigma />,
-      name: "Figma",
+      icon: <SiMongodb />,
+      name: "MongoDB",
+    },
+    {
+      icon: <SiMysql />,
+      name: "SQL",
+    },
+    {
+      icon: <FaPython />,
+      name: "Python",
+    },
+    {
+      icon: <FaDocker />,
+      name: "Docker",
+    },
+    {
+      icon: <SiPostman />,
+      name: "Postman",
+    },
+    {
+      icon: <SiFirebase />,
+      name: "Firebase",
+    },
+    {
+      icon: <SiLaravel />,
+      name: "Laravel",
+    },
+    {
+      icon: <FaPhp />,
+      name: "PHP",
     },
   ],
 };
