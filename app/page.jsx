@@ -36,14 +36,31 @@ export default function Home() {
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
-              >
-                <span>Download Cv</span>
-                <FiDownload className="text-xl" />
-              </Button>
+              <div className="flex flex-col gap-4">
+                <a href="/assets/Cv/Developer.pdf" download="Developer_CV.pdf">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="uppercase flex items-center gap-2"
+                  >
+                    <span>Download CV (English)</span>
+                    <FiDownload className="text-xl" />
+                  </Button>
+                </a>
+                <a
+                  href="/assets/Cv/Developer Geo.pdf"
+                  download="Developer_CV_Geo.pdf"
+                >
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="uppercase flex items-center gap-2"
+                  >
+                    <span>Download CV (Georgian)</span>
+                    <FiDownload className="text-xl" />
+                  </Button>
+                </a>
+              </div>
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex"

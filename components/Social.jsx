@@ -1,8 +1,9 @@
 import Link from "next/link";
-
 import { FaGithub } from "react-icons/fa";
 
-const socials = [{ icon: <FaGithub />, path: "" }];
+const socials = [
+  { icon: <FaGithub />, path: "https://github.com/JustRascal00" },
+];
 
 const Social = ({ containerStyles, iconStyles }) => {
   return (
