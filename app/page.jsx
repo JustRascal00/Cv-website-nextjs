@@ -12,7 +12,11 @@ export default function Home() {
   const [isPageLoaded, setPageLoaded] = useState(false);
 
   useEffect(() => {
-    setPageLoaded(true);
+    const timer = setTimeout(() => {
+      setPageLoaded(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -49,15 +53,17 @@ export default function Home() {
             </div>
           </div>
           {/* Lottie Animation */}
-          <div className="flex justify-center xl:justify-end mt-12 xl:mt-0">
-            <Lottie
-              loop
-              animationData={animationData}
-              play
-              style={{ width: 300, height: 300 }}
-              className={isPageLoaded ? "lottie-animation" : ""} // Apply the CSS class conditionally
-            />
-          </div>
+          {isPageLoaded && (
+            <div className="flex justify-center xl:justify-end mt-12 xl:mt-0">
+              <Lottie
+                loop
+                animationData={animationData}
+                play
+                style={{ width: 300, height: 300 }}
+                className="lottie-animation"
+              />
+            </div>
+          )}
         </div>
       </div>
       <Stats />
