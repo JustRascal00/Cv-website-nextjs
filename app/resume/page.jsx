@@ -56,7 +56,40 @@ const about = {
 const experience = {
   icon: "/assests/resume/badge.svg",
   title: "My Experience",
-  description: "Aaa",
+  description: (
+    <>
+      <p className="mb-4">
+        At Money4You, I contribute as a Backend Developer where my
+        responsibilities encompass managing successful projects using Laravel.
+        My role involves leveraging both SQL and NoSQL databases to ensure the
+        software operates with full functionality and efficiency.
+      </p>
+      <p className="mb-4 font-bold">Key achievements and tasks include:</p>
+      <ul className="list-disc list-inside ml-5 mb-4">
+        <li className="mb-2">
+          Overseeing comprehensive project development with a focus on
+          results-driven methodologies.
+        </li>
+        <li className="mb-2">
+          Collaborating effectively within team settings to deliver seamless
+          project outcomes.
+        </li>
+        <li className="mb-2">
+          Engaging in both backend and frontend development tasks to ensure
+          robust and responsive solutions.
+        </li>
+        <li className="mb-2">
+          Designing and integrating APIs to enhance system capabilities.
+        </li>
+      </ul>
+      <p className="mb-4">
+        My experience at Money4You has honed my skills in backend technologies
+        while providing opportunities to expand my proficiency in frontend
+        development, aligning with my goal to become a well-rounded full-stack
+        developer.
+      </p>
+    </>
+  ),
   items: [
     {
       company: "Money4you.financial",
@@ -184,32 +217,31 @@ const Resume = () => {
               {/* Experience */}
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <div className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {experience.description}
-                </p>
+                </div>
                 <ScrollArea className="h-[400px]">
                   <ul className="gird grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {experience.items.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
-                        >
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
-                            {item.position}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.company}</p>
-                          </div>
-                        </li>
-                      );
-                    })}
+                    {experience.items.map((item, index) => (
+                      <li
+                        key={index}
+                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                      >
+                        <span className="text-accent">{item.duration}</span>
+                        <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          {item.position}
+                        </h3>
+                        <div className="flex items-center gap-3">
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                          <p className="text-white/60">{item.company}</p>
+                        </div>
+                      </li>
+                    ))}
                   </ul>
                 </ScrollArea>
               </div>
             </TabsContent>
+
             {/* Education */}
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">

@@ -30,9 +30,12 @@ export default function Home() {
               <span className="text-accent">Mamuka Xokerashvili</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Motivated and forward-thinking Backend developer with almost one
-              year of Backend practical experience, effective and sustainable
-              web solutions.
+              Motivated and forwardthinking developer with nearly one year of
+              practical experience in backend development, committed to evolving
+              into a proficient fullstack developer. I specialize in crafting
+              effective and sustainable web solutions while striving to enhance
+              user experiences through a comprehensive understanding of the web
+              development spectrum
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
