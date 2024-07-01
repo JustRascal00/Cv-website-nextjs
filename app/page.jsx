@@ -27,7 +27,7 @@ export default function Home() {
             <span className="text-xl">Full-Stack Developer</span>
             <h1 className="h1 mb-6">
               Hello I'm <br />{" "}
-              <span className="text-accent">Mamuka Xokerashvili</span>
+              <span className="text-accent">Mamuka Khokerashvili</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
               Motivated and forwardthinking developer with nearly one year of
