@@ -8,7 +8,7 @@ const services = [
     num: "01",
     title: "Web Development",
     Description:
-      "As a passionate and emerging web developer, I bring a fresh perspective and boundless enthusiasm to every project. With a year of hands-on experience, I’m dedicated to creating modern, user-friendly websites that help businesses and individuals shine online. At [Your Name/Your Business Name], I specialize in providing personalized web development services that cater to your unique needs.",
+      "As a passionate and emerging web developer, I bring a fresh perspective and boundless enthusiasm to every project. With a year of hands-on experience, I’m dedicated to creating modern, user-friendly websites that help businesses and individuals shine online. Specializing in personalized web development services, I cater to your unique needs, ensuring every website is visually appealing, responsive, and optimized for performance. Whether you're a small business, a startup, or an individual looking to establish an online presence, I’m here to help you succeed with tailored solutions and a commitment to excellence.",
     href: "",
   },
   {

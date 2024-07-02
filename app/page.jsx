@@ -30,9 +30,9 @@ export default function Home() {
               <span className="text-accent">Mamuka Khokerashvili</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Motivated and forwardthinking developer with nearly one year of
+              Motivated and forward thinking developer with nearly one year of
               practical experience in backend development, committed to evolving
-              into a proficient fullstack developer. I specialize in crafting
+              into a proficient fullstack developer. I specialize in crafting
               effective and sustainable web solutions while striving to enhance
               user experiences through a comprehensive understanding of the web
               development spectrum
