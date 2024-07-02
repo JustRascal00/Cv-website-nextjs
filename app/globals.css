@@ -1,27 +1,75 @@
+/* Extend the existing CSS rules */
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-  
+@tailwind components;
+@tailwind utilities;
 
-@layer base{
+@layer base {
   body {
     @apply font-primary bg-primary text-white leading-loose;
-
   }
-.h1{
-  @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
-}
-.h2{
-  @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
-}
-.h3{
-  @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
-}
-.text-outline {
-  -webkit-text-stroke: 1px #ffffff;
-}
 
-.text-outline-hover {
-  -webkit-text-stroke: 1px #00ff99;
-}
+  .h1 {
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+  }
+
+  .h2 {
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+  }
+
+  .h3 {
+    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  }
+
+  .text-outline {
+    -webkit-text-stroke: 1px #ffffff;
+  }
+
+  .text-outline-hover {
+    -webkit-text-stroke: 1px #00ff99;
+  }
+
+  /* Hide Google Translate toolbar and related elements */
+  .goog-te-banner-frame.skiptranslate,
+  .goog-te-gadget-icon,
+  .goog-te-gadget-simple,
+  .goog-te-banner-frame,
+  .goog-te-spinner-pos,
+  .goog-te-banner,
+  .goog-te-menu-frame,
+  .goog-te-ft-feedback,
+  .goog-te-ft-feedback div,
+  .goog-te-ft-feedback a,
+  .goog-tooltip {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Hide the Google Translate dropdown */
+  .goog-te-combo {
+    visibility: hidden !important;
+  }
+
+  /* Hide the Google Translate loading spinner */
+  .goog-te-spinner-pos {
+    display: none !important;
+  }
+
+  /* Prevent the body from shifting when the Google Translate toolbar is removed */
+  body {
+    top: 0px !important;
+  }
+
+  /* Customize the Google Translate dropdown if needed */
+  #google_translate_element .goog-te-gadget {
+    color: #fff !important;
+  }
+
+  #google_translate_element .goog-te-combo {
+    background-color: #27272c;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    visibility: hidden; /* Keep it hidden */
+  }
 }

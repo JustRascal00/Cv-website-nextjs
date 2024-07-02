@@ -4,6 +4,8 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
+import useGoogleTranslate from "@/components/useGoogleTranslate";
+import { useState } from "react";
 
 const links = [
   {
@@ -27,8 +29,16 @@ const links = [
     path: "/contact",
   },
 ];
+
 const MobileNav = () => {
   const pathname = usePathname();
+  const { translatePage, currentLanguage } = useGoogleTranslate();
+  const [translated, setTranslated] = useState(false);
+
+  const handleTranslate = () => {
+    translatePage();
+    setTranslated(currentLanguage === "en" ? true : false);
+  };
 
   return (
     <Sheet>
@@ -45,20 +55,23 @@ const MobileNav = () => {
         </div>
 
         <nav className="flex flex-col justify-center items-center gap-8">
-          {links.map((link, index) => {
-            return (
-              <Link
-                href={link.path}
-                key={index}
-                className={`${
-                  link.path === pathname &&
-                  "text-accent border-b-2 border-accent"
-                } text-xl capitalize hover:text-accent transition-all`}
-              >
-                {link.name}
-              </Link>
-            );
-          })}
+          {links.map((link, index) => (
+            <Link
+              href={link.path}
+              key={index}
+              className={`${
+                link.path === pathname && "text-accent border-b-2 border-accent"
+              } text-xl capitalize hover:text-accent transition-all`}
+            >
+              {link.name}
+            </Link>
+          ))}
+          <button
+            onClick={handleTranslate}
+            className="mt-8 text-black bg-gray-800 p-2 rounded-md"
+          >
+            {translated ? "Original" : "Translate"}
+          </button>
         </nav>
       </SheetContent>
     </Sheet>
