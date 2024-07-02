@@ -74,7 +74,7 @@ const useGoogleTranslate = () => {
     // Hide any visible Google Translate elements without removing them
     document
       .querySelectorAll(
-        "iframe, .goog-te-banner-frame, .goog-te-spinner-pos, .goog-te-ft-feedback, .goog-te-ft-feedback div, .goog-te-ft-feedback a, .goog-tooltip"
+        "iframe, .goog-te-banner-frame, .goog-te-spinner-pos, .goog-te-ft-feedback, .goog-te-ft-feedback div, .goog-te-ft-feedback a, .goog-tooltip, #goog-gt-tt"
       )
       .forEach((el) => {
         el.style.display = "none";
