@@ -94,7 +94,7 @@ const experience = {
     {
       company: "Money4you.financial",
       position: "BackEnd Developer",
-      duration: "2023 - Present",
+      duration: "2023 - 2024",
     },
   ],
 };
