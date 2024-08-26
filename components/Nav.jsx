@@ -29,12 +29,12 @@ const links = [
 ];
 const Nav = () => {
   const pathname = usePathname();
-  const { translatePage, currentLanguage } = useGoogleTranslate();
+  const { toggleLanguage, currentLanguage } = useGoogleTranslate();
   const [translated, setTranslated] = useState(false);
 
   const handleTranslate = () => {
-    translatePage();
-    setTranslated(currentLanguage === "en" ? true : false);
+    toggleLanguage();
+    setTranslated(!translated);
   };
 
   return (

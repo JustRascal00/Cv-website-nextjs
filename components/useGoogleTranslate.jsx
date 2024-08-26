@@ -1,8 +1,20 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 const useGoogleTranslate = () => {
   const [currentLanguage, setCurrentLanguage] = useState("en");
   const [isInitialized, setIsInitialized] = useState(false);
+
+  const hideGoogleTranslateElements = useCallback(() => {
+    document
+      .querySelectorAll(
+        "iframe, .goog-te-banner-frame, .goog-te-spinner-pos, .goog-te-ft-feedback, .goog-te-ft-feedback div, .goog-te-ft-feedback a, .goog-tooltip, #goog-gt-tt"
+      )
+      .forEach((el) => {
+        el.style.display = "none";
+        el.style.visibility = "hidden";
+      });
+    document.body.style.top = "0px";
+  }, []);
 
   useEffect(() => {
     const scriptId = "google-translate-script";
@@ -18,9 +30,9 @@ const useGoogleTranslate = () => {
           "google_translate_element"
         );
         setIsInitialized(true);
-        hideGoogleTranslateElements(); // Initial hide
+        hideGoogleTranslateElements();
       } else {
-        setTimeout(initializeGoogleTranslate, 500); // Retry initialization after 500ms
+        setTimeout(initializeGoogleTranslate, 500);
       }
     };
 
@@ -36,56 +48,38 @@ const useGoogleTranslate = () => {
       initializeGoogleTranslate();
     }
 
-    // Continuous checking and hiding of unwanted elements
-    const intervalId = setInterval(() => {
-      hideGoogleTranslateElements();
-    }, 1000);
+    const intervalId = setInterval(hideGoogleTranslateElements, 1000);
 
-    // Clean up the script and added elements when the component unmounts
     return () => {
       if (document.getElementById(scriptId)) {
         document.body.removeChild(document.getElementById(scriptId));
       }
-      // Stop the interval
       clearInterval(intervalId);
     };
-  }, []);
+  }, [hideGoogleTranslateElements]);
 
-  const translatePage = () => {
+  const toggleLanguage = useCallback(() => {
     const translateElement = document.querySelector(".goog-te-combo");
-
     if (translateElement) {
-      const event = new Event("change");
-      if (currentLanguage === "en") {
-        translateElement.value = "ka"; // Change to Georgian
-        setCurrentLanguage("ka");
-      } else {
-        translateElement.value = "en"; // Change to English
-        setCurrentLanguage("en");
+      const newLang = currentLanguage === "en" ? "ka" : "en";
+      translateElement.value = newLang;
+      translateElement.dispatchEvent(new Event("change"));
+      setCurrentLanguage(newLang);
+
+      if (newLang === "en") {
+        // Force reset to English
+        setTimeout(() => {
+          translateElement.value = "en";
+          translateElement.dispatchEvent(new Event("change"));
+        }, 50);
       }
-      translateElement.dispatchEvent(event);
     } else {
       console.warn("Translate element not found. Retrying...");
-      setTimeout(translatePage, 500); // Retry after 500ms if the element is not found
+      setTimeout(toggleLanguage, 500);
     }
-  };
+  }, [currentLanguage]);
 
-  const hideGoogleTranslateElements = () => {
-    // Hide any visible Google Translate elements without removing them
-    document
-      .querySelectorAll(
-        "iframe, .goog-te-banner-frame, .goog-te-spinner-pos, .goog-te-ft-feedback, .goog-te-ft-feedback div, .goog-te-ft-feedback a, .goog-tooltip, #goog-gt-tt"
-      )
-      .forEach((el) => {
-        el.style.display = "none";
-        el.style.visibility = "hidden";
-      });
-
-    // Reset the body top margin
-    document.body.style.top = "0px";
-  };
-
-  return { translatePage, currentLanguage, hideGoogleTranslateElements };
+  return { toggleLanguage, currentLanguage, hideGoogleTranslateElements };
 };
 
 export default useGoogleTranslate;
