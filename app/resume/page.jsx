@@ -23,7 +23,8 @@ import {
 } from "react-icons/si";
 const about = {
   title: "About me",
-  description: "Aaa",
+  description:
+    "Developer passionate about creating web applications. Skilled in both front-end and back-end technologies.",
   info: [
     {
       fieldName: "Name",
@@ -116,7 +117,8 @@ const education = {
 // Skills
 const skills = {
   title: "My Skills",
-  description: "Aaaaa",
+  description:
+    "Proficient in a range of modern technologies for building dynamic and responsive web applications. Skilled in both front-end and back-end development.",
   skillList: [
     {
       icon: <FaHtml5 />,
