@@ -172,6 +172,104 @@ const projects = [
     live: "",
     github: "https://github.com/JustRascal00/laravel-ProjectManagement-App",
   },
+  {
+    num: "05",
+    category: "",
+    title: "project 5",
+    description: (
+      <>
+        This application is a full-stack web app developed with React, Express,
+        MongoDB, and integrates Google Gemini AI for advanced conversational
+        capabilities. The application provides a seamless user experience for
+        interacting with ChatGPT, leveraging modern technologies to deliver a
+        powerful and intuitive chat interface.
+        <br />
+        <br />
+        <strong>Key Features:</strong>
+        <ul className="list-disc list-inside ml-4">
+          <li>
+            Frontend: Built with React to create a responsive and dynamic user
+            interface.
+          </li>
+          <li>
+            Backend: Utilizes Express to handle server-side logic and API
+            endpoints.
+          </li>
+          <li>
+            Database: MongoDB is used for efficient data storage and management.
+          </li>
+          <li>
+            AI Integration: Incorporates Google Gemini AI for sophisticated and
+            context-aware conversational responses.
+          </li>
+        </ul>
+        <strong>Functionality:</strong>
+        <ul className="list-disc list-inside ml-4">
+          <li>User authentication and profile management.</li>
+          <li>
+            Real-time chat capabilities with a clean and user-friendly
+            interface.
+          </li>
+          <li>Scalable architecture to handle multiple concurrent users.</li>
+          <li>
+            Data persistence and retrieval with MongoDB for maintaining user
+            conversations and settings.
+          </li>
+        </ul>
+      </>
+    ),
+    stack: [
+      { name: "React" },
+      { name: "Express" },
+      { name: "MongoDB" },
+      { name: "Google Gemini AI " },
+    ],
+    image: "/assets/work/Website5.png",
+    live: "",
+    github: "https://github.com/JustRascal00/CHATAI",
+  },
+  {
+    num: "06",
+    category: "",
+    title: "project 6",
+    description: (
+      <>
+        This project showcases an impressive 3D web developer portfolio built
+        using React JS, Three.js, and other cutting-edge technologies. The
+        portfolio leverages advanced 3D graphics and animations to create an
+        engaging and interactive user experience.
+        <br />
+        <br />
+        <strong>Key Features:</strong>
+        <ul className="list-disc list-inside ml-4">
+          <li>
+            3D Models and Geometries: Load, create, and customize stunning 3D
+            models with various lighting effects. Gain a deep understanding of
+            3D space through camera positioning and object manipulation.
+          </li>
+          <li>
+            Responsiveness and Performance: Ensure the portfolio is responsive
+            across all devices and optimize site performance using Suspense and
+            Preload techniques.
+          </li>
+          <li>
+            3D Models and Geometries: Load, create, and customize stunning 3D
+            models with various lighting effects. Gain a deep understanding of
+            3D space through camera positioning and object manipulation.
+          </li>
+        </ul>
+      </>
+    ),
+    stack: [
+      { name: "Three.js" },
+      { name: "React Three Fiber" },
+      { name: "Tailwind CSS" },
+      { name: "Framer Motion" },
+    ],
+    image: "/assets/work/Website6.png",
+    live: "",
+    github: "https://github.com/JustRascal00/Cv-Website",
+  },
 ];
 
 const Work = () => {
