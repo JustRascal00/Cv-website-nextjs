@@ -109,7 +109,7 @@ const education = {
     {
       institution: "Georgian Technical University",
       degree: "Faculty of Informatics and Management Systems",
-      duration: "2023 - Present",
+      duration: "2020 - Present",
     },
   ],
 };
