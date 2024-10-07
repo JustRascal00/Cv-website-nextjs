@@ -270,6 +270,55 @@ const projects = [
     live: "",
     github: "https://github.com/JustRascal00/Cv-Website",
   },
+  {
+    num: "07",
+    category: "",
+    title: "project 7",
+    description: (
+      <>
+        A sophisticated chat application that leverages RAG (Retrieval-Augmented
+        Generation) technology to provide intelligent, context-aware responses
+        based on webpage content. Built with Next.js and TypeScript, it features
+        real-time streaming responses, Redis-powered session management, and a
+        modern UI using NextUI components. The app automatically processes and
+        indexes webpage content to provide relevant, contextual responses to
+        user queries.
+        <br />
+        <br />
+        <strong>Key Features:</strong>
+        <ul className="list-disc list-inside ml-4">
+          <li>
+            Smart Context Processing: Automatically analyzes and indexes webpage
+            content for contextual responses.
+          </li>
+          <li>
+            Streaming Chat: Real-time AI responses with efficient message
+            streaming.
+          </li>
+          <li>Persistent Sessions: Redis-powered chat history management.</li>
+          <li>
+            Advanced Content Handling: Intelligent chunking of large webpage
+            content.
+          </li>
+          <li>
+            Modern UI/UX: Responsive design with smooth transitions and
+            interactions.
+          </li>
+        </ul>
+      </>
+    ),
+    stack: [
+      { name: "Next.js" },
+      { name: "TypeScript" },
+      { name: "Redis" },
+      { name: "NextUI" },
+      { name: "Tailwind CSS" },
+      { name: "LlamaIndex" },
+    ],
+    image: "/assets/work/Website7.png",
+    live: "",
+    github: "https://github.com/JustRascal00/webexplain",
+  },
 ];
 
 const Work = () => {
