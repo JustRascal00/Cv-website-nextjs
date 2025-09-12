@@ -21,7 +21,7 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "(+995) 551 21 55 57",
+    description: "(+995) 551-21-55-57",
   },
   {
     icon: <FaEnvelope />,
@@ -30,8 +30,8 @@ const info = [
   },
   {
     icon: <FaMapMarkerAlt />,
-    title: "Adress",
-    description: "saqartvelos mebrdzolta qucha",
+    title: "Address",
+    description: "Tbilisi, Georgia",
   },
 ];
 

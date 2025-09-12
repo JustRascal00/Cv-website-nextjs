@@ -24,18 +24,19 @@ export default function Home() {
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left">
-            <span className="text-xl">Full-Stack Developer</span>
+            <span className="text-xl">Full‑Stack Developer</span>
             <h1 className="h1 mb-6">
               Hello I'm <br />{" "}
               <span className="text-accent">Mamuka Khokerashvili</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Motivated and forward thinking developer with nearly one year of
-              practical experience in backend development, committed to evolving
-              into a proficient fullstack developer. I specialize in crafting
-              effective and sustainable web solutions while striving to enhance
-              user experiences through a comprehensive understanding of the web
-              development spectrum
+              Full‑stack developer with hands‑on experience across React,
+              Next.js, Python, PHP/Laravel and SQL/MySQL. Built and integrated
+              APIs, delivered remote freelance projects end‑to‑end, and
+              contributed to production back‑end systems at Money4you.financial.
+              Currently working as a Database Operator at IT Service Georgia
+              while building modern web apps that are reliable, scalable and
+              user‑focused.
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">

@@ -24,7 +24,7 @@ import {
 const about = {
   title: "About me",
   description:
-    "Developer passionate about creating web applications. Skilled in both front-end and back-end technologies.",
+    "Full‑stack developer experienced in React, Next.js, Python and PHP/Laravel. I build reliable APIs, scalable backends, and user‑friendly UIs. I’ve delivered freelance projects end‑to‑end and contributed to production systems in fintech.",
   info: [
     {
       fieldName: "Name",
@@ -36,7 +36,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "1 Year",
+      fieldValue: "2+ Years",
     },
     {
       fieldName: "Email",
@@ -44,11 +44,15 @@ const about = {
     },
     {
       fieldName: "Freelance",
-      fieldValue: "Availabe",
+      fieldValue: "Available",
     },
     {
       fieldName: "Languages",
-      fieldValue: "Georgia,English",
+      fieldValue: "Georgian, English",
+    },
+    {
+      fieldName: "Location",
+      fieldValue: "Tbilisi, Georgia",
     },
   ],
 };
@@ -60,42 +64,28 @@ const experience = {
   description: (
     <>
       <p className="mb-4">
-        At Money4You, I contribute as a Backend Developer where my
-        responsibilities encompass managing successful projects using Laravel.
-        My role involves leveraging both SQL and NoSQL databases to ensure the
-        software operates with full functionality and efficiency.
-      </p>
-      <p className="mb-4 font-bold">Key achievements and tasks include:</p>
-      <ul className="list-disc list-inside ml-5 mb-4">
-        <li className="mb-2">
-          Overseeing comprehensive project development with a focus on
-          results-driven methodologies.
-        </li>
-        <li className="mb-2">
-          Collaborating effectively within team settings to deliver seamless
-          project outcomes.
-        </li>
-        <li className="mb-2">
-          Engaging in both backend and frontend development tasks to ensure
-          robust and responsive solutions.
-        </li>
-        <li className="mb-2">
-          Designing and integrating APIs to enhance system capabilities.
-        </li>
-      </ul>
-      <p className="mb-4">
-        My experience at Money4You has honed my skills in backend technologies
-        while providing opportunities to expand my proficiency in frontend
-        development, aligning with my goal to become a well-rounded full-stack
-        developer.
+        Delivered full‑stack solutions as a freelancer and contributed to
+        backend systems in fintech. Built and integrated APIs, maintained
+        SQL/MySQL databases, and collaborated with international teams to ship
+        quality features on time.
       </p>
     </>
   ),
   items: [
     {
+      company: "Upwork/Freelancer.com",
+      position: "Freelance Developer",
+      duration: "Mar 2022 - May 2023",
+    },
+    {
       company: "Money4you.financial",
-      position: "BackEnd Developer",
-      duration: "2023 - 2024",
+      position: "Backend Developer",
+      duration: "Jul 2023 - Jul 2024",
+    },
+    {
+      company: "IT Service Georgia",
+      position: "Database Operator",
+      duration: "Feb 2024 - Present",
     },
   ],
 };
@@ -108,8 +98,8 @@ const education = {
   items: [
     {
       institution: "Georgian Technical University",
-      degree: "Faculty of Informatics and Management Systems",
-      duration: "2020 - Present",
+      degree: "Bachelor of Informatics and Management Systems",
+      duration: "Sep 2020 - Jun 2024",
     },
   ],
 };
@@ -118,7 +108,7 @@ const education = {
 const skills = {
   title: "My Skills",
   description:
-    "Proficient in a range of modern technologies for building dynamic and responsive web applications. Skilled in both front-end and back-end development.",
+    "Languages: JavaScript, Python, PHP, SQL, HTML, CSS. Frameworks & Libraries: React, Next.js, Laravel, Express, FastAPI, Tailwind CSS. Databases: MongoDB, MySQL, PostgreSQL, Firebase, Redis. Tools: Docker, Git/GitHub, Postman.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -154,7 +144,7 @@ const skills = {
     },
     {
       icon: <SiMysql />,
-      name: "SQL",
+      name: "MySQL / SQL",
     },
     {
       icon: <FaPython />,
@@ -223,7 +213,7 @@ const Resume = () => {
                   {experience.description}
                 </div>
                 <ScrollArea className="h-[400px]">
-                  <ul className="gird grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((item, index) => (
                       <li
                         key={index}
@@ -260,7 +250,7 @@ const Resume = () => {
                           className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="text-xl text-center lg:text-left">
                             {item.degree}
                           </h3>
                           <div className="flex items-center gap-3">
