@@ -75,17 +75,17 @@ const experience = {
     {
       company: "Upwork/Freelancer.com",
       position: "Freelance Developer",
-      duration: "Mar 2022 - May 2023",
+      duration: "2022 - 2023",
     },
     {
       company: "Money4you.financial",
       position: "Backend Developer",
-      duration: "Jul 2023 - Jul 2024",
+      duration: "2023 - 2024",
     },
     {
       company: "IT Service Georgia",
       position: "Database Operator",
-      duration: "Feb 2024 - Present",
+      duration: "2024 - Present",
     },
   ],
 };
